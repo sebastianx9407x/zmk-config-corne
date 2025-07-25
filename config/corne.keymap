@@ -110,6 +110,11 @@
             bindings = <&kp CAPS>;
             key-positions = <15 3>;
         };
+
+        tilda {
+            bindings = <&kt GRAVE>;
+            key-positions = <2 14>;
+        };
     };
 
     //
