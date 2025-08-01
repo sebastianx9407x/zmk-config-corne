@@ -132,10 +132,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp Q         &kp W         &kp E                     &kp R                  &kp T          &kp Y        &kp U             &kp I                              &kp O         &kp P     &none
-&none  &weak LGUI A  &weak LALT S  &shifthr LCTRL D          &shifthr LEFT_SHIFT F  &kp G          &kp H        &shifthr RSHFT J  &shifthr RCTRL K                   &weak RALT L  &kp SEMI  &none
-&none  &kp Z         &kp X         &kp C                     &kp V                  &kp B          &kp N        &kp M             &kp COMMA                          &kp DOT       &kp FSLH  &none
-                                   &hm LC(BACKSPACE) ESCAPE  &lt 1 BACKSPACE        &lt 2 SPACE    &lt 2 ENTER  &lt 1 TAB         &shifthr APOSTROPHE DOUBLE_QUOTES
+&none  &weak ESCAPE Q  &kp W         &kp E                     &kp R                  &kp T          &kp Y        &kp U             &kp I             &kp O         &weak DEL P           &none
+&none  &weak LGUI A    &weak LALT S  &shifthr LCTRL D          &shifthr LEFT_SHIFT F  &kp G          &kp H        &shifthr RSHFT J  &shifthr RCTRL K  &weak RALT L  &weak RGUI SEMICOLON  &none
+&none  &weak CAPS Z    &kp X         &kp C                     &kp V                  &kp B          &kp N        &kp M             &kp COMMA         &kp DOT       &weak GLOBE SLASH     &none
+                                     &hm LG(BACKSPACE) ESCAPE  &lt 2 BACKSPACE        &lt 1 SPACE    &lt 1 ENTER  &lt 2 TAB         &lt 3 SQT
             >;
         };
 
@@ -149,10 +149,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp EXCLAMATION        &kp AT                 &kp POUND           &kp DOLLAR               &kp PERCENT     &kp CARET     &kp AMPERSAND             &kp STAR            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &none
-&none  &hm LEFT_GUI NUMBER_1  &hm LEFT_ALT NUMBER_2  &hm LCTRL NUMBER_3  &hm LEFT_SHIFT NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &hm RIGHT_SHIFT NUMBER_7  &hm RCTRL NUMBER_8  &hm RALT NUMBER_9     &hm RIGHT_GUI NUMBER_0  &none
-&none  &kp TILDE              &kp PLUS               &kp MINUS           &kp SLASH                &kp EQUAL       &kp UNDER     &kp LEFT_BRACKET          &kp RIGHT_BRACKET   &kp LEFT_BRACE        &kp RIGHT_BRACE         &none
-                                                     &kp LC(BACKSPACE)   &kp GRAVE                &kp SPACE       &kp RET       &kp DEL                   &kp PIPE
+&none  &kp EXCLAMATION        &kp AT                 &kp POUND           &kp DOLLAR               &kp PERCENT             &kp CARET     &kp AMPERSAND             &kp STAR            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &none
+&none  &hm LEFT_GUI NUMBER_1  &hm LEFT_ALT NUMBER_2  &hm LCTRL NUMBER_3  &hm LEFT_SHIFT NUMBER_4  &kp NUMBER_5            &kp NUMBER_6  &hm RIGHT_SHIFT NUMBER_7  &hm RCTRL NUMBER_8  &hm RALT NUMBER_9     &hm RIGHT_GUI NUMBER_0  &none
+&none  &kp PLUS               &kp MINUS              &kp SLASH           &kp EQUAL                &kp NON_US_BACKSLASH    &kp UNDER     &kp LEFT_BRACKET          &kp RIGHT_BRACKET   &kp LEFT_BRACE        &kp RIGHT_BRACE         &none
+                                                     &kp TILDE           &kp GRAVE                &kp SPACE               &kp RET       &kp DEL                   &kp PIPE
             >;
         };
 
@@ -166,10 +166,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp F1       &kp F2       &kp F3        &kp F4         &save              &none  &kp TAB   &kp UP_ARROW    &kp RALT   &kp PAGE_UP    &trans
-&none  &hm LGUI F5  &hm LALT F6  &hm LCTRL F7  &hm LSHIFT F8  &hm LC(V) LC(C)    &none  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &trans
-&none  &kp F9       &kp F10      &kp F11       &kp F12        &kp PSCRN          &none  &none     &none           &none      &none          &trans
-                                 &bt BT_CLR    &bt BT_NXT     &none              &none  &none     &none
+&none  &kp F1       &kp F2       &kp F3        &kp F4         &save              &kp PAGE_UP    &kp TAB         &kp UP_ARROW  &kp RALT      &kp PAGE_UP  &trans
+&none  &hm LGUI F5  &hm LALT F6  &hm LCTRL F7  &hm LSHIFT F8  &hm LC(V) LC(C)    &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN      &kp UP_ARROW  &kp RIGHT    &trans
+&none  &kp F9       &kp F10      &kp F11       &kp F12        &kp PSCRN          &none          &none           &none         &none         &none        &trans
+                                 &none         &none          &none              &none          &none           &none
+            >;
+        };
+
+        Bluetooth {
+            bindings = <
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &bt BT_CLR  &bt BT_CLR_ALL  &trans
+&trans  &trans        &trans        &bt BT_PRV    &bt BT_NXT    &trans          &trans  &trans  &trans  &trans      &trans          &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans      &trans          &trans
+                                    &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
     };
