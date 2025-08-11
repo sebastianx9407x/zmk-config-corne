@@ -135,24 +135,7 @@
 &none  &weak ESCAPE Q  &kp W         &kp E                     &kp R                  &kp T          &kp Y        &kp U             &kp I             &kp O         &weak DEL P           &none
 &none  &weak LGUI A    &weak LALT S  &shifthr LCTRL D          &shifthr LEFT_SHIFT F  &kp G          &kp H        &shifthr RSHFT J  &shifthr RCTRL K  &weak RALT L  &weak RGUI SEMICOLON  &none
 &none  &weak CAPS Z    &kp X         &kp C                     &kp V                  &kp B          &kp N        &kp M             &kp COMMA         &kp DOT       &weak GLOBE SLASH     &none
-                                     &hm LG(BACKSPACE) ESCAPE  &lt 2 BACKSPACE        &lt 1 SPACE    &lt 1 ENTER  &lt 2 TAB         &lt 3 SQT
-            >;
-        };
-
-        num {
-            display-name = "num";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
-
-            bindings = <
-&none  &kp EXCLAMATION        &kp AT                 &kp POUND           &kp DOLLAR               &kp PERCENT             &kp CARET     &kp AMPERSAND             &kp STAR            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &none
-&none  &hm LEFT_GUI NUMBER_1  &hm LEFT_ALT NUMBER_2  &hm LCTRL NUMBER_3  &hm LEFT_SHIFT NUMBER_4  &kp NUMBER_5            &kp NUMBER_6  &hm RIGHT_SHIFT NUMBER_7  &hm RCTRL NUMBER_8  &hm RALT NUMBER_9     &hm RIGHT_GUI NUMBER_0  &none
-&none  &kp PLUS               &kp MINUS              &kp SLASH           &kp EQUAL                &kp NON_US_BACKSLASH    &kp UNDER     &kp LEFT_BRACKET          &kp RIGHT_BRACKET   &kp LEFT_BRACE        &kp RIGHT_BRACE         &none
-                                                     &kp TILDE           &kp GRAVE                &kp SPACE               &kp RET       &kp DEL                   &kp PIPE
+                                     &hm LG(BACKSPACE) ESCAPE  &lt 3 BACKSPACE        &lt 1 SPACE    &lt 1 ENTER  &lt 3 TAB         &lt 3 SQT
             >;
         };
 
@@ -170,6 +153,23 @@
 &none  &hm LGUI F5  &hm LALT F6  &hm LCTRL F7  &hm LSHIFT F8  &hm LC(V) LC(C)    &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &trans
 &none  &kp F9       &kp F10      &kp F11       &kp F12        &kp PSCRN          &none          &none           &none         &none      &none          &trans
                                  &none         &none          &none              &none          &none           &none
+            >;
+        };
+
+        num {
+            display-name = "num";
+
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
+
+            bindings = <
+&none  &kp EXCLAMATION        &kp AT                 &kp POUND           &kp DOLLAR               &kp PERCENT             &kp CARET     &kp AMPERSAND             &kp STAR            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &none
+&none  &hm LEFT_GUI NUMBER_1  &hm LEFT_ALT NUMBER_2  &hm LCTRL NUMBER_3  &hm LEFT_SHIFT NUMBER_4  &kp NUMBER_5            &kp NUMBER_6  &hm RIGHT_SHIFT NUMBER_7  &hm RCTRL NUMBER_8  &hm RALT NUMBER_9     &hm RIGHT_GUI NUMBER_0  &none
+&none  &kp PLUS               &kp MINUS              &kp SLASH           &kp EQUAL                &kp NON_US_BACKSLASH    &kp UNDER     &kp LEFT_BRACKET          &kp RIGHT_BRACKET   &kp LEFT_BRACE        &kp RIGHT_BRACE         &none
+                                                     &kp TILDE           &kp GRAVE                &kp SPACE               &kp RET       &kp DEL                   &kp PIPE
             >;
         };
 
